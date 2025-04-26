@@ -76,14 +76,14 @@ networks:
     
     ```bash
     cd Job07
-    docker-compose up -d
+    docker compose up -d
     
     ```
     
 2.  **Vérification de l’état**
     
     ```bash
-    docker-compose ps
+    docker compose ps
     
     ```
     
@@ -119,7 +119,7 @@ networks:
 
 -   **Impossible de se connecter en FTP**
     
-    -   Vérifiez que les ports **21** et **30000–30009** sont bien exposés (`docker-compose ps`).
+    -   Vérifiez que les ports **21** et **30000–30009** sont bien exposés (`docker compose ps`).
         
     -   Si le mode passif bloque, ajustez `PASV_ADDRESS` sur votre IP publique ou locale.
         
@@ -140,6 +140,6 @@ networks:
 Pour arrêter et supprimer les conteneurs, réseaux et volumes :
 
 ```bash
-docker-compose down -v
+docker compose down -v
 
 ```
