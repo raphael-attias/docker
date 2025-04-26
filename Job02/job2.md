@@ -184,17 +184,3 @@ Supprime un conteneur
 `docker rmi`
 
 Supprime une image
-
-## Erreurs courantes et solutions
-
-### Erreur : "Unable to find image 'hello-world:latest' locally"
-
-**Solution :** C'est normal la première fois, Docker va automatiquement télécharger l'image depuis Docker Hub.
-
-### Erreur : "Error response from daemon: conflict: unable to delete [ID] (cannot be forced) - image is being used by running container"
-
-**Solution :** Arrêtez et supprimez d'abord le conteneur qui utilise l'image avec `docker stop [CONTAINER_ID]` puis `docker rm [CONTAINER_ID]`.
-
-### Erreur : "Error response from daemon: failed to create task for container: failed to create shim task"
-
-**Solution :** Redémarrez le service Docker avec `systemctl restart docker`.
