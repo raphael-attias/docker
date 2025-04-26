@@ -4,7 +4,7 @@
 Pour ce job, nous allons installer Portainer et explorer comment il peut faciliter la gestion de Docker.
 
 
-### Fichier `docker-compose.yml` pour Portainer
+### Fichier `docker compose.yml` pour Portainer
 
 ```
 services:
