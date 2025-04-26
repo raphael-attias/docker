@@ -1,11 +1,15 @@
 # Job 02 - Test de l'installation Docker avec hello-world
 
 ## Objectif
-Tester l'installation de Docker avec le conteneur "hello-world" et se familiariser avec les commandes Docker de base.
+
+Tester l'installation de Docker avec le conteneur `hello-world` et se familiariser avec les commandes Docker de base.
 
 ## Prérequis
-- Docker installé (voir Job 01)
-- Connexion Internet fonctionnelle
+
+-   Docker installé (voir Job 01)
+    
+-   Connexion Internet fonctionnelle
+    
 
 ## Étapes détaillées
 
@@ -14,9 +18,11 @@ Tester l'installation de Docker avec le conteneur "hello-world" et se familiaris
 ```bash
 # Exécuter le conteneur hello-world
 docker run hello-world
+
 ```
 
-Résultat attendu :
+**Résultat attendu :**
+
 ```
 Hello from Docker!
 This message shows that your installation appears to be working correctly.
@@ -29,6 +35,7 @@ To generate this message, Docker took the following steps:
  4. The Docker daemon streamed that output to the Docker client, which sent it
     to your terminal.
 [...]
+
 ```
 
 ### 2. Explorer les commandes Docker de base
@@ -44,6 +51,7 @@ docker pull alpine
 
 # Rechercher une image sur Docker Hub
 docker search nginx
+
 ```
 
 #### Gestion des conteneurs
@@ -77,6 +85,7 @@ docker restart web-server
 # Supprimer un conteneur (doit être arrêté ou utiliser -f pour forcer)
 docker stop web-server
 docker rm web-server
+
 ```
 
 #### Logs et informations
@@ -93,6 +102,7 @@ docker stats web-server
 
 # Afficher les informations détaillées d'un conteneur
 docker inspect web-server
+
 ```
 
 #### Exécuter des commandes dans un conteneur en cours d'exécution
@@ -103,6 +113,7 @@ docker exec web-server ls -la
 
 # Ouvrir un terminal interactif dans un conteneur en cours d'exécution
 docker exec -it web-server bash
+
 ```
 
 ### 3. Nettoyage
@@ -116,35 +127,74 @@ docker rm $(docker ps -a -q)
 
 # Supprimer toutes les images non utilisées
 docker image prune -a
+
 ```
 
 ## Résultats attendus
-- Le conteneur hello-world s'exécute correctement et affiche le message de bienvenue
-- Vous avez pu exécuter et expérimenter les commandes Docker de base
-- Vous comprenez la différence entre images et conteneurs
+
+-   Le conteneur `hello-world` s'exécute correctement et affiche le message de bienvenue
+    
+-   Vous avez pu exécuter et expérimenter les commandes Docker de base
+    
+-   Vous comprenez la différence entre images et conteneurs
+    
 
 ## Commandes Docker essentielles à retenir
 
-| Commande | Description |
-|----------|-------------|
-| `docker run` | Crée et démarre un nouveau conteneur |
-| `docker ps` | Liste les conteneurs en cours d'exécution |
-| `docker ps -a` | Liste tous les conteneurs |
-| `docker images` | Liste les images téléchargées |
-| `docker pull` | Télécharge une image depuis un registre |
-| `docker start/stop` | Démarre/arrête un conteneur existant |
-| `docker exec` | Exécute une commande dans un conteneur en cours d'exécution |
-| `docker logs` | Affiche les logs d'un conteneur |
-| `docker rm` | Supprime un conteneur |
-| `docker rmi` | Supprime une image |
+Commande
+
+Description
+
+`docker run`
+
+Crée et démarre un nouveau conteneur
+
+`docker ps`
+
+Liste les conteneurs en cours d'exécution
+
+`docker ps -a`
+
+Liste tous les conteneurs
+
+`docker images`
+
+Liste les images téléchargées
+
+`docker pull`
+
+Télécharge une image depuis un registre
+
+`docker start/stop`
+
+Démarre/arrête un conteneur existant
+
+`docker exec`
+
+Exécute une commande dans un conteneur
+
+`docker logs`
+
+Affiche les logs d'un conteneur
+
+`docker rm`
+
+Supprime un conteneur
+
+`docker rmi`
+
+Supprime une image
 
 ## Erreurs courantes et solutions
 
 ### Erreur : "Unable to find image 'hello-world:latest' locally"
+
 **Solution :** C'est normal la première fois, Docker va automatiquement télécharger l'image depuis Docker Hub.
 
 ### Erreur : "Error response from daemon: conflict: unable to delete [ID] (cannot be forced) - image is being used by running container"
+
 **Solution :** Arrêtez et supprimez d'abord le conteneur qui utilise l'image avec `docker stop [CONTAINER_ID]` puis `docker rm [CONTAINER_ID]`.
 
 ### Erreur : "Error response from daemon: failed to create task for container: failed to create shim task"
+
 **Solution :** Redémarrez le service Docker avec `systemctl restart docker`.
