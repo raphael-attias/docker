@@ -29,9 +29,9 @@ Chaque **Job** contient :
 
 -   un objectif pédagogique lié à Docker
     
--   les fichiers nécessaires (Dockerfile, `docker-compose.yml`, scripts…)
+-   les fichiers nécessaires (Dockerfile, `docker compose.yml`, scripts…)
     
--   un document Markdown (`job-XX.md`) décrivant les étapes et bonnes pratiques
+-   un document Markdown (`jobXX.md`) décrivant les étapes et bonnes pratiques
     
 
 Les Jobs couvrent l’installation de Docker, la gestion des conteneurs, des volumes, de réseaux, la sécurisation, l’automatisation via Bash, et l’utilisation d’outils comme Portainer.
@@ -91,44 +91,34 @@ Les Jobs couvrent l’installation de Docker, la gestion des conteneurs, des vol
 
 ## Exécution des Jobs
 
-1.  **Cloner** ce dépôt :
-    
-
-git clone [https://github.com/raphael-attias/docker.git](https://github.com/raphael-attias/docker.git) cd docker
-
 ```
-2. **Accéder** au dossier du Job souhaité :
+1. **Accéder** au dossier du Job souhaité :
    ```bash
-cd job-07
+cd Job07
 # ou
-cd job-10
+cd Job10
 
 ```
 
-3.  **Suivre** les instructions du fichier Markdown correspondant :
+2.  **Suivre** les instructions du fichier Markdown correspondant :
     
 
-less job-07.md
+less Job07.md
 
 ```
-4. **Exécuter** les commandes (Docker, scripts, Compose) indiquées.
-5. **Nettoyer** :
+3. **Exécuter** les commandes (Docker, scripts, Compose) indiquées.
+4. **Nettoyer** :
    ```bash
 # Pour les stacks Compose
-docker-compose down -v
+docker compose down -v
 # Pour les scripts
-docker-cleanup.sh
+docker cleanup.sh
 
 ```
 
 ## Aller plus loin
 
 -   -   Créer une stack complète de type XAMPP avec Docker Compose (`Pour-aller-plus-loin.md`).
-        
--   -   Sécuriser les conteneurs : user non-root, secrets, quotas de ressources.
-        
--   -   Mettre en place un pipeline CI/CD avec Docker (GitHub Actions, GitLab CI…).
-        
 
 ## Ressources
 
