@@ -38,7 +38,7 @@ CMD ["/usr/sbin/sshd", "-D"]
 1.  Lancer les services en arrière-plan :
     
     ```
-    docker-compose up -d
+    docker compose up -d
     ```
     
 2.  Créer localement le fichier `index.html` :
