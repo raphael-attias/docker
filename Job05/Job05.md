@@ -66,11 +66,11 @@ alias dmount='docker inspect -f "{{range .Mounts}}{{.Source}} -> {{.Destination}
 alias dsh='f() { docker exec -it "$1" /bin/bash || docker exec -it "$1" /bin/sh; }; f'
 
 # Alias Docker Compose
-alias dc='docker-compose'
-alias dcup='docker-compose up -d'
-alias dcdown='docker-compose down'
-alias dcps='docker-compose ps'
-alias dclogs='docker-compose logs'
+alias dc='docker compose'
+alias dcup='docker compose up -d'
+alias dcdown='docke compose down'
+alias dcps='docker compose ps'
+alias dclogs='docker compose logs'
 
 # Fonction de nettoyage complet
 
