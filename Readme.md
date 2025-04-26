@@ -1,5 +1,5 @@
 
-# Projet Docker DevOps
+# Projet Docker
 
 Ce dépôt regroupe une série d’exercices pratiques (Jobs 01 à 11) permettant d’acquérir et de maîtriser Docker et son écosystème dans un contexte DevOps.
 
@@ -72,7 +72,7 @@ Les Jobs couvrent l’installation de Docker, la gestion des conteneurs, des vol
 │   ├── Job10.md
 │   ├── docker-install.sh
 │   └── docker-cleanup.sh
-└── job11/                               # Portainer et alternatives
+└── Job11/                               # Portainer et alternatives
     ├── Job11.md
     └── docker-compose.yml
 
