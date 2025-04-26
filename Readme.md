@@ -103,7 +103,7 @@ cd Job10
 2.  **Suivre** les instructions du fichier Markdown correspondant :
     
 
-less Job07.md
+Job07.md
 
 ```
 3. **Exécuter** les commandes (Docker, scripts, Compose) indiquées.
