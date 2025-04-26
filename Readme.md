@@ -118,7 +118,7 @@ docker cleanup.sh
 
 ## Aller plus loin
 
--   -   Créer une stack complète de type XAMPP avec Docker Compose (`Pour-aller-plus-loin.md`).
+-   Créer une stack complète de type XAMPP avec Docker Compose (`Pour-aller-plus-loin.md`).
 
 ## Ressources
 
